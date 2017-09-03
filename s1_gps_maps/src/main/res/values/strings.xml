@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Gps y Maps</string>
+    <string name="mensaje_gps_no_activo">Dirigite a configuraciones y activa el GPS por favor.</string>
+    <string name="google_error_conexion">Ocurrió un error al conectar Google Api Client</string>
+    <string name="current_position_text">Mi Posición Actual</string>
+    <string name="selected_marker_text">Usted Seleccionó %1$s</string>
+    <string name="lat_long">Ultima localización: Latitude: %1$d , Longitude: %2$d</string>
+</resources>
