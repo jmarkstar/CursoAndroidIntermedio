@@ -15,8 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onGoLocation(View view){
+    public void onGoLocation1(View view){
         Intent intent = new Intent(this, GoogleLocationApiActivity.class);
+        startActivity(intent);
+    }
+
+    public void onGoLocation2(View view){
+        Intent intent = new Intent(this, GoogleLocationApi2Activity.class);
         startActivity(intent);
     }
 

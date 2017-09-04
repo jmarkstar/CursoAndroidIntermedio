@@ -27,8 +27,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GoogleLocationApiActivity" />
+        <activity android:name=".GoogleLocationApi2Activity" />
         <activity android:name=".MapsActivity" />
-        <activity android:name=".MapsWithLocationActivity"></activity>
+        <activity android:name=".MapsWithLocationActivity"/>
     </application>
 
 </manifest>

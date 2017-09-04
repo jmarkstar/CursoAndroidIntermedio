@@ -4,5 +4,8 @@
     <string name="google_error_conexion">Ocurrió un error al conectar Google Api Client</string>
     <string name="current_position_text">Mi Posición Actual</string>
     <string name="selected_marker_text">Usted Seleccionó %1$s</string>
-    <string name="lat_long">Ultima localización: Latitude: %1$d , Longitude: %2$d</string>
+    <string name="gps_dialog_descripcion">Es necesario que el GPS esté activado, por favor diríjase a las configuraciones y activelo.</string>
+    <string name="gps_dialog_titulo">GPS ES OBLIGATORIO</string>
+    <string name="gps_dialog_boton">Ir a Configuración</string>
+    <string name="gps_activar_mensaje_error">Es necesario activar el GPS, por favor activelo para   que el APP funcione correctamente.</string>
 </resources>

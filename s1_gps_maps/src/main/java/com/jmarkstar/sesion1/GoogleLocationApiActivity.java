@@ -80,12 +80,12 @@ public class GoogleLocationApiActivity extends AppCompatActivity implements Loca
     /** PASO 4 Validar que el usuario tenga activado el gps, sino mostrar un mensaje y cerrar la aplicación.
      * */
     private void validarGpsActivo(){
-        //if(AppUtils.gpsEstaActivo(this)){
+        if(AppUtils.gpsEstaActivo(this)){
             configurarGoogleLocationAPI();
-        /*}else{
+        }else{
             Toast.makeText(this, R.string.mensaje_gps_no_activo, Toast.LENGTH_SHORT).show();
             finish();
-        }*/
+        }
     }
 
     /** PASO 5: CONFIGURAR GOOGLE API CLIENT.
@@ -153,8 +153,8 @@ public class GoogleLocationApiActivity extends AppCompatActivity implements Loca
 
     private void mostrarLocalizacion(){
         if (mUltimaLocalizacion != null) {
-            Toast.makeText(GoogleLocationApiActivity.this , String.format(getString(R.string.lat_long),
-                    mUltimaLocalizacion.getLatitude(),mUltimaLocalizacion.getLongitude()),Toast.LENGTH_LONG).show();
+            Toast.makeText(GoogleLocationApiActivity.this , "Ultima locaionzacion: Latitude:" +
+                    mUltimaLocalizacion.getLatitude()+", Longitude:"+mUltimaLocalizacion.getLongitude(),Toast.LENGTH_LONG).show();
         }
     }
 

@@ -4,12 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jmarkstar.sesion1.GoogleLocationApiActivity">
+    tools:context="com.jmarkstar.sesion1.GoogleLocationApi2Activity">
 
-    <TextView android:text="GOOGLE LOCATION API"
+    <TextView android:id="@+id/title"
+        android:text="GOOGLE LOCATION API"
         android:textSize="19sp"
         android:textStyle="bold"
         android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:layout_below="@+id/title"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:text="Usando LocationListener"
+        android:textSize="19sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

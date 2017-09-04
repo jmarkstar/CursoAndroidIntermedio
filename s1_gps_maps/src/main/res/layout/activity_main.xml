@@ -8,8 +8,13 @@
     android:gravity="center"
     tools:context="com.jmarkstar.sesion1.MainActivity">
 
-    <Button android:onClick="onGoLocation"
-        android:text="Ir a Gps Location"
+    <Button android:onClick="onGoLocation1"
+        android:text="Ir a Gps Location 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button android:onClick="onGoLocation2"
+        android:text="Ir a Gps Location 2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
