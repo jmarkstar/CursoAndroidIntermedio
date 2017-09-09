@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.jmarkstar.sesion2.MainActivity">
+
+    <Button android:text="startActivityForResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoStartActivityForResult"/>
+
+    <Button android:text="Intent ACTION_IMAGE_CAPTURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoTakePhoto"/>
+
+    <Button android:text="Intent ACTION_VIDEO_CAPTURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoRecordVideo"/>
+
+    <Button android:text="Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoCamera"/>
+
+    <Button android:text="Acelerometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoAcelerometer"/>
+
+    <Button android:text="Giroscopio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoGyroscope"/>
+
+</LinearLayout>
