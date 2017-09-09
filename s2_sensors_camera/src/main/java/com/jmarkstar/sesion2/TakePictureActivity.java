@@ -19,6 +19,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.jmarkstar.sesion2.util.AppUtils;
+import com.jmarkstar.sesion2.util.MyFileProvider;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +85,7 @@ public class TakePictureActivity extends AppCompatActivity {
                 File fileImage = new File(photoPath);
                 Uri fotoURI;
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
-                    fotoURI = FileProvider.getUriForFile(this, getApplicationContext().getPackageName()+".fileprovider", fileImage);
+                    fotoURI = MyFileProvider.getUriForFile(this, getApplicationContext().getPackageName()+".fileprovider", fileImage);
                 }else{
                     fotoURI = Uri.fromFile(fileImage);
                 }

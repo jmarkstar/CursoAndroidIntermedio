@@ -37,7 +37,6 @@ public class CameraViewActivity extends AppCompatActivity implements View.OnClic
     private Handler mBackgroundHandler;
     private MediaPlayer mediaPlayerCamera;
     private Button btnTomarFoto;
-    private Button btnFlash;
     private Button btnCambiarCamara;
 
     public static void start(Context context) {
@@ -51,12 +50,10 @@ public class CameraViewActivity extends AppCompatActivity implements View.OnClic
 
         mCameraView = (CameraView) findViewById(R.id.camera);
         btnTomarFoto = (Button)findViewById(R.id.btn_tomar_foto);
-        btnFlash = (Button)findViewById(R.id.btn_flash);
         btnCambiarCamara = (Button)findViewById(R.id.btn_camara);
 
         btnTomarFoto.setOnClickListener(this);
         btnCambiarCamara.setOnClickListener(this);
-        btnFlash.setOnClickListener(this);
 
         if(mCameraView != null) {
             mCameraView.addCallback(mCallback);
@@ -70,17 +67,8 @@ public class CameraViewActivity extends AppCompatActivity implements View.OnClic
         if(view.getId() == R.id.btn_tomar_foto){
             mCameraView.takePicture();
             mediaPlayerCamera.start();
-        }else if(view.getId() == R.id.btn_flash){
-            cambiarFlash();
         }else if(view.getId() == R.id.btn_camara){
             cambiarCamara();
-        }
-    }
-
-    private void cambiarFlash(){
-        if (mCameraView != null) {
-            int flash = mCameraView.getFlash();
-            mCameraView.setFlash(flash == CameraView.FLASH_OFF? CameraView.FLASH_ON: CameraView.FLASH_OFF);
         }
     }
 
@@ -187,6 +175,7 @@ public class CameraViewActivity extends AppCompatActivity implements View.OnClic
         @Override public void onPictureTaken(CameraView cameraView, final byte[] data) {
             getBackgroundHandler().post(new Runnable() {
                 @Override public void run() {
+
                     InputStream is = new ByteArrayInputStream(data);
                     Bitmap bmp = BitmapFactory.decodeStream(is);
 
