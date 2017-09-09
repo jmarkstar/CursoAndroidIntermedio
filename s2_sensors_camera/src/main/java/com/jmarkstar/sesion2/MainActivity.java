@@ -18,12 +18,16 @@ public class MainActivity extends AppCompatActivity {
         ActForResultInitActivity.start(this);
     }
 
-    public void onGoAcelerometer(View view){
+    public void onGoProximity(View view){
+        ProximityActivity.start(this);
+    }
 
+    public void onGoAcelerometer(View view){
+        AccelerometerActivity.start(this);
     }
 
     public void onGoGyroscope(View view){
-
+        GyroscopeActivity.start(this);
     }
 
     public void onGoTakePhoto(View view){

@@ -5,8 +5,21 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="true"/>
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.proximity"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -43,7 +56,10 @@
         </provider>
 
         <activity android:name=".RecordVideoActivity" />
-        <activity android:name=".CameraViewActivity"></activity>
+        <activity android:name=".CameraViewActivity" />
+        <activity android:name=".AccelerometerActivity" />
+        <activity android:name=".GyroscopeActivity" />
+        <activity android:name=".ProximityActivity"></activity>
     </application>
 
 </manifest>

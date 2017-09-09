@@ -11,6 +11,7 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import com.jmarkstar.sesion2.util.AppUtils;
 import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jmarkstar on 9/8/17.
@@ -27,7 +29,7 @@ import java.io.IOException;
 public class TakePictureActivity extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
-    private static final int REQUEST_WRITE_STORE_PERMISSION = 100;
+    private static final int REQUEST_PERMISSIONS = 300;
 
     private ImageView ivPhoto;
     private String photoPath;
@@ -46,14 +48,25 @@ public class TakePictureActivity extends AppCompatActivity {
     /** 1. Llamar al Intent para tomar fotos
      * */
     public void takePicture(View view){
-
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            int permissionWriteStore = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-            if(permissionWriteStore == PackageManager.PERMISSION_GRANTED){
-                goToCamera();
-            }else{
-                requestPermissions(new String []{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_STORE_PERMISSION);
-            }
+            checkPermissions();
+        }else{
+            goToCamera();
+        }
+    }
+
+    private void checkPermissions(){
+        List<String> permissionsToAsk = new ArrayList<>();
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            permissionsToAsk.add(Manifest.permission.CAMERA);
+        }
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            permissionsToAsk.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+
+        if(!permissionsToAsk.isEmpty()){
+            ActivityCompat.requestPermissions(this, permissionsToAsk.toArray(new String[permissionsToAsk.size()]), REQUEST_PERMISSIONS);
         }else{
             goToCamera();
         }
@@ -83,11 +96,21 @@ public class TakePictureActivity extends AppCompatActivity {
 
     @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(requestCode == REQUEST_WRITE_STORE_PERMISSION){
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                goToCamera();
+        if(requestCode == REQUEST_PERMISSIONS){
+            if(grantResults.length==2){
+                boolean cameraPermission = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                boolean accessStorePermission = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+
+                if(accessStorePermission && cameraPermission)
+                    goToCamera();
+                else
+                    Toast.makeText(this, "Los permisos son necesarios.", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "El permiso es necesario.", Toast.LENGTH_SHORT).show();
+                boolean permission = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                if(permission)
+                    goToCamera();
+                else
+                    Toast.makeText(this, "Los permisos son necesarios.", Toast.LENGTH_SHORT).show();
             }
         }
     }

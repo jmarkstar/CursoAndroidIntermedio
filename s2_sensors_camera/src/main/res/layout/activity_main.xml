@@ -29,6 +29,11 @@
         android:layout_height="wrap_content"
         android:onClick="onGoCamera"/>
 
+    <Button android:text="Proximidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onGoProximity"/>
+
     <Button android:text="Acelerometro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
