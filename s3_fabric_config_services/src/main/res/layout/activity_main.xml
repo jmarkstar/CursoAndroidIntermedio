@@ -26,18 +26,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <Button android:text="Guardar el estado"
+        <Button android:text="Guardar datos sencillos"
             android:onClick="onGoSaveStates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button android:text="Retained Fragments y datos complejos"
+            android:onClick="onGoSaveComplexData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button android:text="Hilos"
             android:onClick="onGoThreads"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button android:text="Work Fragments"
-            android:onClick="onGoWorkFragments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

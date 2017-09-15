@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         SaveStateActivity.start(this);
     }
 
-    public void onGoThreads(View view){
+    public void onGoSaveComplexData(View view){
+        SaveComplexStateActivity.start(this);
     }
 
-    public void onGoWorkFragments(View view){
-
+    public void onGoThreads(View view){
     }
 }
