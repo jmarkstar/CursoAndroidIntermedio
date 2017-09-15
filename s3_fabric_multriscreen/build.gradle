@@ -16,10 +16,31 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
+
+    signingConfigs {
+        release {
+            keyAlias "s3"
+            keyPassword "123456"
+            storeFile file(".signing/s3-keystore.jks")
+            storePassword "123456"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
+
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //for fabric
+            ext.betaDistributionGroupAliases = "galaxy_testers"
+            ext.betaDistributionReleaseNotes = "Sesion3 App beta # 1."
+        }
+
+        debug{
+            debuggable true
         }
     }
 }
