@@ -10,4 +10,7 @@
     <string name="zero_percent">0%</string>
     <string name="one_hundred_percent">100%</string>
     <string name="menu_trigger_config_change">Trigger Config Change</string>
+
+    <string name="service_label">Galaxy Service</string>
+    <string name="service_description">Este servicio es de prueba para el curdo de android intermedio en Galaxy Training</string>
 </resources>

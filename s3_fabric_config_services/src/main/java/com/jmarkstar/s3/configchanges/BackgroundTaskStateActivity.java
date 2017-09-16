@@ -1,4 +1,4 @@
-package com.jmarkstar.s3;
+package com.jmarkstar.s3.configchanges;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jmarkstar.s3.R;
 
 public class BackgroundTaskStateActivity extends AppCompatActivity implements TaskRetainedFragment.TaskCallbacks{
 

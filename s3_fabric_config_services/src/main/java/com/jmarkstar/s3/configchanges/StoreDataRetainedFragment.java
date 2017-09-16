@@ -1,4 +1,4 @@
-package com.jmarkstar.s3;
+package com.jmarkstar.s3.configchanges;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

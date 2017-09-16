@@ -1,4 +1,4 @@
-package com.jmarkstar.s3;
+package com.jmarkstar.s3.configchanges;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.jmarkstar.s3.R;
+
 import java.util.ArrayList;
 import java.util.List;
 

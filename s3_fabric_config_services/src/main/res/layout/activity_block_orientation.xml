@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jmarkstar.s3.BlockOrientationActivity">
+    tools:context="com.jmarkstar.s3.configchanges.BlockOrientationActivity">
 
     <Button android:id="@+id/btn_add"
         android:onClick="onAddName"

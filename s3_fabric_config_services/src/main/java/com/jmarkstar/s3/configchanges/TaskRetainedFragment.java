@@ -1,4 +1,4 @@
-package com.jmarkstar.s3;
+package com.jmarkstar.s3.configchanges;
 
 import android.app.Activity;
 import android.content.Context;

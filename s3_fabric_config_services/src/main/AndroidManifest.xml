@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jmarkstar.s3">
 
+    <permission android:name="pe.edu.galaxy.PERMISO_SERVICE"/>
+
+    <uses-permission android:name="pe.edu.galaxy.PERMISO_SERVICE"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,8 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="io.fabric.ApiKey"
+
+        <meta-data android:name="io.fabric.ApiKey"
             android:value="04afc6e3694cdef708b2b117cd776859dea9ec88" />
 
         <activity android:name=".MainActivity">
@@ -23,15 +27,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".BlockOrientationActivity"
+
+        <activity android:name=".configchanges.BlockOrientationActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".PreventOrientationActivity"
+
+        <activity android:name=".configchanges.PreventOrientationActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".SaveStateActivity" />
-        <activity android:name=".SaveComplexStateActivity" />
-        <activity android:name=".BackgroundTaskStateActivity"></activity>
+
+        <activity android:name=".configchanges.SaveStateActivity" />
+
+        <activity android:name=".configchanges.SaveComplexStateActivity" />
+
+        <activity android:name=".configchanges.BackgroundTaskStateActivity"/>
+
+        <service android:name=".services.MyService"
+            android:icon="@drawable/ic_gear"
+            android:label="@string/service_label"
+            android:description="@string/service_description"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="pe.edu.galaxy.PERMISO_SERVICE" />
+
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.jmarkstar.s3;
+package com.jmarkstar.s3.configchanges;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jmarkstar.s3.R;
+
 import java.util.ArrayList;
 
 public class PreventOrientationActivity extends AppCompatActivity {
