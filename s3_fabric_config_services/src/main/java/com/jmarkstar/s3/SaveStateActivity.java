@@ -27,6 +27,10 @@ public class SaveStateActivity extends AppCompatActivity {
         mTvText = findViewById(R.id.tv_text);
     }
 
+    /** https://developer.android.com/reference/android/os/TransactionTooLargeException.html
+     * hay que tener cuidado con guardar datos de gran tamaño, ya que este buffer soporta un mega
+     * como maximo, sino ocurrirá el error TransactionTooLargeException.
+    * */
     @Override public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putStringArrayList("names", names);

@@ -30,7 +30,8 @@
             android:name=".PreventOrientationActivity"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".SaveStateActivity" />
-        <activity android:name=".SaveComplexStateActivity"></activity>
+        <activity android:name=".SaveComplexStateActivity" />
+        <activity android:name=".BackgroundTaskStateActivity"></activity>
     </application>
 
 </manifest>

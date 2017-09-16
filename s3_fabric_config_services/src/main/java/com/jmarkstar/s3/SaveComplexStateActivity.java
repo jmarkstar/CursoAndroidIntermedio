@@ -51,7 +51,8 @@ public class SaveComplexStateActivity extends AppCompatActivity {
 
     @Override protected void onPause() {
         super.onPause();
-        //isFinishing.- verifica si el activity esta en el proceso de finalizacion. podria ser por que se esta llamando a finish()
+        // https://developer.android.com/reference/android/app/Activity.html#isFinishing()
+        // isFinishing.- verifica si el activity esta en el proceso de finalizacion. podria ser por que se esta llamando a finish()
         // comunmente, este metodo se usa en el onPause() para determinar si es solo una pausa o si el app se va a cerrar completamente.
 
         if(isFinishing()) {

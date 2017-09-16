@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         SaveComplexStateActivity.start(this);
     }
 
-    public void onGoThreads(View view){
+    public void onExecThread(View view){
+        BackgroundTaskStateActivity.start(this);
     }
 }

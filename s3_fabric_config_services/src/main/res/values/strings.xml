@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">s3_fabric_multriscreen</string>
+    <string name="app_name">s3_fabric_config_services</string>
+
+    <string name="task_progress_msg">Progress:</string>
+    <string name="start">Iniciar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="task_started_msg">Tarea Iniciada!</string>
+    <string name="task_cancelled_msg">Tarea cancelada!</string>
+    <string name="task_complete_msg">Tarea completada!</string>
+    <string name="zero_percent">0%</string>
+    <string name="one_hundred_percent">100%</string>
+    <string name="menu_trigger_config_change">Trigger Config Change</string>
 </resources>
