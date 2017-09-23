@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.jmarkstar.s4.MainActivity">
+
+        <TextView android:text="SIN NINE PATCH"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:hint="Escribe tu nombre"
+            android:textSize="14sp"
+            android:text="Juan Carlos"
+            android:background="@drawable/selector_editext_no_ninepatch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:hint="Escribe tu apellido"
+            android:text="Perez Perez"
+            android:textSize="18sp"
+            android:background="@drawable/selector_editext_no_ninepatch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginTop="12dp"
+            android:hint="Escribe tu dirección"
+            android:text="Av. Arequipa 304 dpto 800"
+            android:textSize="24sp"
+            android:background="@drawable/selector_editext_no_ninepatch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <Button android:text="CON NINE PATCH"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onShowNinePatchItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout android:id="@+id/ll_ninepatch"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:text="CON NINE PATCH"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginTop="12dp"
+                android:hint="Escribe tu nombre"
+                android:textSize="14sp"
+                android:text="Juan Carlos"
+                android:background="@drawable/selector_editext"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginTop="12dp"
+                android:hint="Escribe tu apellido"
+                android:text="Perez Perez"
+                android:textSize="18sp"
+                android:background="@drawable/selector_editext"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginTop="12dp"
+                android:hint="Escribe tu dirección"
+                android:text="Av. Arequipa 304 dpto 800"
+                android:textSize="24sp"
+                android:background="@drawable/selector_editext"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,1 +1,1 @@
-include ':s1_gps_maps', ':s2_sensors_camera', ':s3_fabric_config_services'
+include ':s1_gps_maps', ':s2_sensors_camera', ':s3_fabric_config_services', ':s4'
